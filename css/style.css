@@ -1,3 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
 
+#peliculas {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3%;
+  justify-content: space-around;
+}
+#peliculas article {
+  max-width: 200px;
+  margin: 3%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#peliculas img {
+  height: 300px;
+  width: 200px;
+  border-radius: 3%;
+  -webkit-box-shadow: 0px 10px 40px 0px #b8b8f5;
+  -moz-box-shadow: 0px 10px 40px 0px #b8b8f5;
+  box-shadow: 0px 10px 40px 0px #b8b8f5;
+  margin-block-end: 6%;
+}
+#peliculas p {
+  margin-bottom: 3%;
+}
+#peliculas .title {
+  color: #585483;
+  width: 50%;
+}
+#peliculas .ratio {
+  width: 50%;
+  text-align: right;
+}
+#peliculas .date {
+  color: #585483;
+}
 
 /*# sourceMappingURL=style.css.map */
