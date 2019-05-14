@@ -8,6 +8,7 @@
 }
 
 #peliculas{
+  padding: 0 10%;
   display: flex;
   flex-wrap: wrap;
   margin: 3%;
@@ -30,13 +31,10 @@
     margin-block-end: 6%;
   }
 
-  p{
-    margin-bottom: 3%;
-  }
-
   .title{
     color: #585483;
     width: 50%;
+    align-self: flex-end;
   }
   
   .ratio{
@@ -45,6 +43,7 @@
   }
   
   .date{
+    width: 100%;
     color: #585483
   }
 }
