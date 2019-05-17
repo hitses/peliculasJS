@@ -16,9 +16,9 @@ function printFilms(filmsToShow){
 
   filmsToShow.forEach((film) => {
     let divFilm = document.createElement('article');
-    let {poster_path, title, vote_average, release_date} = film;
+    let {poster_path, title, vote_average, release_date, id} = film;
     divFilm.innerHTML = `
-    <img src="${IMG_PATH}${poster_path}" alt="${title}">
+    <a href="/pelicula.html?id=${id}"><img src="${IMG_PATH}${poster_path}" alt="${title}"></a>
     <p class="title">${title}</p>
     <p class="ratio">${vote_average}</p>
     <p class="date">${release_date}</p>
