@@ -11,20 +11,24 @@ window.addEventListener('load', () => {
 
 
 function printFilms(filmsToShow){
-  let divFilms = document.querySelector('#peliculas');
-  divFilms.innerHTML = '';
+  let sectionFilms = document.querySelector('#peliculas');
+  sectionFilms.innerHTML = '';
 
   filmsToShow.forEach((film) => {
-    let divFilm = document.createElement('article');
+    let articleFilm = document.createElement('article');
     let {poster_path, title, vote_average, release_date, id} = film;
-    divFilm.innerHTML = `
-    <a href="/pelicula.html?id=${id}"><img src="${IMG_PATH}${poster_path}" alt="${title}"></a>
-    <p class="title">${title}</p>
-    <p class="ratio">${vote_average}</p>
+    let stars = '<i class="fas fa-star"></i>'.repeat((Math.round(film['vote_average'] / 2)));
+    
+    articleFilm.innerHTML = `
+    <a href="/pelicula.html?id=${id}" target="_blank"><p class="title">${title}</p></a>
+    <a href="/pelicula.html?id=${id}" target="_blank"><img src="${IMG_PATH}${poster_path}" alt="${title}"></a>
+    <div class="stars">
+      ${stars}
+    </div>
     <p class="date">${release_date}</p>
     `;
 
-    divFilms.appendChild(divFilm);
+    sectionFilms.appendChild(articleFilm);
   });
 }
 
@@ -33,3 +37,9 @@ function buscar(){
   let searchElement = films.filter(film => film.title.toLowerCase().includes(inputElement.toLowerCase()));
   printFilms(searchElement);
 }
+
+//Entre para buscar
+let input = document.getElementById("inputBusqueda");
+input.addEventListener("keyup", function() {
+  document.getElementById("botonBuscar").click();
+});
