@@ -12,6 +12,7 @@ function load (){
     let url = new URL(window.location.href);
     let result = url.searchParams.get('id');
     let pelicula = films.find((iteracion) => result == iteracion.id)
+    let idClasificacion = pelicula.genre_ids;
     let body = document.querySelector('body');
     let articleFilm = document.createElement('article');
     let stars = '<i class="fas fa-star"></i>'.repeat((Math.round(pelicula['vote_average'] / 2)));

@@ -8,9 +8,10 @@ window.addEventListener('load', () => {
     let films = resp.data.results;
     printFilms(films);
 
-    let botonBuscar = document.querySelector('#botonBuscar');
-    botonBuscar.addEventListener('click', buscar);
+    let busqueda = document.querySelector('#busqueda');
+    busqueda.addEventListener('click', buscar);
 
+    //Para buscar películas
     function buscar() {
       let inputElement = document.querySelector('#inputBusqueda').value;
       let searchElement = films.filter(film => film.title.toLowerCase().includes(inputElement.toLowerCase()));
@@ -19,8 +20,66 @@ window.addEventListener('load', () => {
     
     let input = document.getElementById("inputBusqueda");
     input.addEventListener("keyup", function () {
-      document.getElementById("botonBuscar").click();
+      document.getElementById("busqueda").click();
     });
+    //Para buscar películas
+
+    //Para ordenar películas por título
+    let orderTytle = document.querySelector('#ordenarTitulo');
+    orderTytle.addEventListener('click', orderByTitle);
+
+    function orderByTitle(){
+      films.sort(function(a, b){
+        let nameA = a.title.toLowerCase(), nameB = b.title.toLowerCase();
+        if (nameA < nameB){
+          return -1;
+        }
+        if (nameA > nameB){
+          return 1;
+        }
+        return 0;
+       });
+       printFilms(films);
+    };
+    //Para ordenar películas por título
+
+    //Para ordenar películas por popularidad
+    let orderPopularity = document.querySelector('#ordenarPopularidad');
+    orderPopularity.addEventListener('click', orderByPopularity);
+  
+    function orderByPopularity(){
+      films.sort(function(a, b){
+        let PopularityA = a.vote_average, PopularityB = b.vote_average;
+        if (PopularityA < PopularityB){
+          return 1;
+        }
+        if (PopularityA > PopularityB){
+          return -1;
+        }
+        return 0;
+       });
+       printFilms(films);
+    };
+    //Para ordenar películas por popularidad
+
+    //Para ordenar películas por fecha
+    let orderDate = document.querySelector('#ordenarFecha');
+    orderDate.addEventListener('click', orderByDate);
+  
+    function orderByDate(){
+      films.sort(function(a, b){
+        let dateA = a.release_date, dateB = b.release_date;
+        if (dateA < dateB){
+          return 1;
+        }
+        if (dateA > dateB){
+          return -1;
+        }
+        return 0;
+       });
+       printFilms(films);
+    };
+    //Para ordenar películas por fecha
   });
 
   function printFilms(filmsToShow) {
@@ -50,5 +109,5 @@ window.addEventListener('load', () => {
 
       sectionFilms.appendChild(articleFilm);
     });
-  }
+  };
 });
