@@ -8,7 +8,6 @@
 
 body {
   background-color: #fafafa;
-  background-color: #fafafa;
 }
 
 header {
@@ -52,7 +51,7 @@ header img {
   text-decoration: none;
 }
 #peliculas .title {
-  color: #585483;
+  color: #3D3D3D;
   align-self: flex-end;
   height: 3rem;
   text-decoration: none;
@@ -67,7 +66,7 @@ header img {
 }
 #peliculas .date {
   width: 100%;
-  color: #585483;
+  color: #3D3D3D;
   text-align: center;
   padding-bottom: 10%;
 }
@@ -91,7 +90,7 @@ header img {
 
 input[type=text] {
   outline: none;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #dcdcdc;
 }
 
 input[type=text]:focus {
@@ -101,13 +100,36 @@ input[type=text]:focus {
 
 .botonesOrdenar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 2%;
+  margin: 1% 5%;
 }
 
 .botonOrdenar {
+  width: 240px;
+  height: 50px;
+  background-color: white;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #DDDDDD;
+  display: inline-block;
+  cursor: pointer;
+  color: #3D3D3D;
+  font-family: Lato;
   font-size: 1rem;
-  margin: 0 25px;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+  outline-style: none;
+}
+
+.botonOrdenar:hover {
+  color: #207ce5;
+}
+
+.botonOrdenar:active {
+  position: relative;
 }
 
 .stars {
@@ -115,6 +137,27 @@ input[type=text]:focus {
   display: flex;
   justify-content: center;
   margin-bottom: 5px;
+  color: #3D3D3D;
+}
+
+footer {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  width: 90vw;
+  border-top: 1px solid #3D3D3D;
+}
+footer div {
+  display: flex;
+  justify-content: space-between;
+  padding: 3% 0;
+  width: 30vw;
+  margin: 0 auto;
+}
+footer div a {
+  text-decoration: none;
+  color: #3D3D3D;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
