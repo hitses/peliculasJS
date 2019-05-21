@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.stars {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+header img {
+  height: 120px;
+  width: auto;
+}
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+article img {
+  width: 500px;
+}
+article .title {
+  text-align: center;
+  width: 90vw;
+  font-family: Lato;
+  font-size: 3rem;
+  margin-bottom: 2%;
+  border-bottom: 2px solid black;
+}
+article .stars {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin-bottom: 5%;
+}
+article .caratula {
+  width: 500px;
+  margin-bottom: 5%;
+  margin: 0 5%;
+}
+article .overview {
+  font-family: Lato;
+  width: 100%;
+  padding: 5%;
+  text-align: center;
+}
+
+/*# sourceMappingURL=detail.css.map */

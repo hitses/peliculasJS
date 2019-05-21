@@ -130,8 +130,6 @@ input[type=text]:focus {
   display: flex;
   justify-content: center;
   margin-bottom: 5px;
-  color: #deb954;
-  text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
 }
 
 /*# sourceMappingURL=style.css.map */
